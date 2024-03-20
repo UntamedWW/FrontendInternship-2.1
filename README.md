@@ -30,6 +30,7 @@ npm install
 To start the application, navigate to the project directory in your terminal and run the following command:
 
 ```
+npm run build
 npm start
 ```
 

@@ -4,11 +4,4 @@ services:
     build: .
     ports:
       - "3000:3000"
-  db:
-    image: 'mysql'
-    environment: 
-      ROOT_PASSWORD: password
-    volumes:
-    - db-data:/foo
 volumes:
-  db-data:
