@@ -1,11 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import Message from "./Pages/StartPage";
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return <h1>Hello, welcome to my project</h1>
+  return <div><Message /></div>
 }
 
-export default App
+export default App;
