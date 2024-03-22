@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import ReactDOM from 'react-dom';
 import "./modal.css"
 
 interface ModalProps {
@@ -7,14 +8,15 @@ interface ModalProps {
   setActive: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Modal = ({ active, setActive, children }: ModalProps) => {
-    return (
-        <div className= {active? "modal active" : "modal"} onClick={() => setActive(false)}>
+const Modal = ({ active = false, setActive, children }: ModalProps) => {
+    return ReactDOM.createPortal(
+        <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
             <div className={active ? "modal__content active" : "modal__content"} onClick={e => e.stopPropagation()}>
                 {children}
             </div>
-        </div>
-    )
+        </div>,
+        document.body
+    );
 }
 
 export default Modal;

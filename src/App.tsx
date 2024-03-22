@@ -16,7 +16,7 @@ function App() {
   const [modalActive, setModalActive] = useState(true)
   return (
     <>
-    <h1>Hi, welcome to this prob app</h1>
+    <h1>Hi, welcome to this prob app!</h1>
     <NavBar />
       <Routes>
         <Route path='/' element={<UserProfile />} />
