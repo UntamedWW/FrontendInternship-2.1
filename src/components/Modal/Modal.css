@@ -13,6 +13,13 @@
   transition: 0.5s;
 }
 
+.modalText {
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .modal.active {
   opacity: 1;
   pointer-events: all;
